@@ -41,8 +41,8 @@
    echo "<br>";
    
    echo  
-   $query  = "INSERT into digital (author_name, book_size, book_cost,book_recorded_by, completion_time
-    ) Values('{$this->author_name}','{$this->b_weight}','{$this->b_price}','{$this->publisher_name}','{$this->b_completion_time}')";        
+   $query  = "INSERT into digital (author_name, book_size, book_cost,book_recorded_by, completion_time,illustrator_name,editor_name,book_main
+    ) Values('{$this->author_name}','{$this->b_weight}','{$this->b_price}','{$this->publisher_name}','{$this->b_completion_time}','{$this->illustrator_name}','{$this->editor_name}','{$this->book_main}')";        
    $result = mysqli_query($conn1, $query);
      
     if (!$result)

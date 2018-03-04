@@ -22,9 +22,9 @@
   <body>
   	<?php
      include '../db.php';
-    s
-      
-     $sql= "SELECT * from book_main";
+    
+     $name = $_GET['name'];
+     $sql= "SELECT * from book_main where name = '{$name}'";
      $result = mysqli_query($conn1,$sql);
         
      if ($result->num_rows > 0){
@@ -40,7 +40,7 @@
             </li> </center>";
           }
         }
-        $paperback ="SELECT * From paperback";
+        $paperback ="SELECT * From paperback where book_main = '{$name}'";
         $result = mysqli_query($conn1,$paperback);
 
        if($result->num_rows>0)
@@ -48,7 +48,7 @@
 
         while ($row = mysqli_fetch_array($result))
         {   
-          $arr=("Author_name: " . $row["author_name"].'<br>'."Book_Published_By: " .$row["book_recorded_by"].'<br>'."Book_size: ".$row["book_size"].'<br>'."Book_cost: ".$row["book_cost"].'<br>'."completion_time" .$row["completion_time"]. '<br>');
+          $arr=("Author_name: " . $row["author_name"].'<br>'."Book_Published_By: " .$row["book_recorded_by"].'<br>'."Book_size: ".$row["book_size"].'<br>'."Book_cost: ".$row["book_cost"].'<br>'."completion_time" .$row["completion_time"]. '<br>'."illustrator_name" .$row["illustrator_name"]. '<br>'."editor_name" .$row["editor_name"]. '<br>');
           echo " <li><center>
           $arr<br>
           </li> </center>";

@@ -7,7 +7,7 @@ $(function(){
         switch(booktype)
         {
             case "Hardcover" :
-                    $("#display_form").load("http://localhost/Book_Industry/Form/f_hardcover.php");
+                    $("#display_form").load("http://127.0.0.1/Book_industry/Form/f_hardcover.php");
                     console.log("hardcover");
                     break;
             case "Paperback" :

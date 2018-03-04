@@ -44,7 +44,7 @@
    echo "<br>";
    
    echo  
-   $query  = "INSERT into audio (author_name, book_size, book_cost,book_recorded_by, completion_time,b_voice) Values('{$this->author_name}','{$this->b_weight}','{$this->b_price}','{$this->publisher_name}','{$this->b_completion_time}','{$this->b_voice}')";        
+   $query  = "INSERT into audio (author_name, book_size, book_cost,book_recorded_by, completion_time,b_voice,illustrator_name,editor_name,book_main) Values('{$this->author_name}','{$this->b_weight}','{$this->b_price}','{$this->publisher_name}','{$this->b_completion_time}','{$this->b_voice}','{$this->illustrator_name}','{$this->editor_name}','{$this->book_main}')";        
    $result = mysqli_query($conn1, $query);
      
     if (!$result)
